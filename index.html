@@ -372,7 +372,7 @@
             width: 55px;
             border: none;
             font-size: 30px;
-            color: var(--cor3);
+            color: var(--cor1);
             z-index: 1;
         }
 
@@ -386,17 +386,32 @@
             width: 55px;
             border: none;
             font-size: 30px;
-            color: var(--cor3);
+            color: var(--cor1);
             z-index: 1;
         }
 
         #fotos {
-            height: 600px;
+            height: 700px;
             padding: 0 400px;
             display: flex;
             flex-wrap: nowrap;
             overflow: hidden;
             align-items: center;
+        }
+
+        #fotos div{
+            padding: 0 35px;
+        }
+
+        #fotos video{
+            height: 490px;
+            border: 3px solid var(--cor1);
+            border-radius: 15px;
+        }
+
+        #fotos img{
+            border: 3px solid var(--cor1);
+            border-radius: 10px;
         }
 
         #metodos img {
@@ -529,7 +544,7 @@
             width: 55px;
             border: none;
             font-size: 30px;
-            color: var(--cor3);
+            color: var(--cor1);
             z-index: 1;
         }
 
@@ -543,7 +558,7 @@
             width: 55px;
             border: none;
             font-size: 30px;
-            color: var(--cor3);
+            color: var(--cor1);
             z-index: 1;
         }
 
@@ -557,7 +572,7 @@
             width: 55px;
             border: none;
             font-size: 30px;
-            color: var(--cor3);
+            color: var(--cor1);
             z-index: 1;
         }
 
@@ -571,7 +586,7 @@
             width: 55px;
             border: none;
             font-size: 30px;
-            color: var(--cor3);
+            color: var(--cor1);
             z-index: 1;
         }
 
@@ -653,12 +668,12 @@
         /*Rodape
 -------------*/
         #rodape {
-            height: 180px;
+            height: 130px;
             background-color: var(--cor1);
         }
 
         #rodape img {
-            margin: 15px 0;
+            margin: 0;
         }
 
         #rodape i {
@@ -676,6 +691,7 @@
 
         #rodape p {
             font-size: 16px;
+            padding: 10px 0 0 0;
         }
 
         #rodape a#social {
@@ -1076,7 +1092,7 @@
                 animation: whatsapp 4s infinite ease-in-out !important;
                 position: fixed;
                 left: 35px;
-                bottom: 35px;
+                bottom: 25px;
             }
 
             #whats a img {
@@ -1494,7 +1510,7 @@
             animation: whatsapp 2.5s infinite ease-in-out;
             position: fixed;
             right: 35px;
-            bottom: 35px;
+            bottom: 15px;
         }
 
         #whats a img {
@@ -1597,7 +1613,7 @@
 
                         Tenho um time de vendas estruturado.
                         Somos mais de mil clientes ativos.
-                        Fomos o primeiro empresário do segmento no Brasil a fazer propaganda em TV aberta (Band),
+                        Fui o primeiro empresário do segmento no Brasil a fazer propaganda em TV aberta (Band),
                         elevando o nível do mercado.
                         <br><br>
 
@@ -1628,11 +1644,9 @@
             <button class="seta-esquerda-2 controles-2"><i class="fa-solid fa-chevron-left"></i></button>
 
             <div id="fotos">
-                <img class="item-2 item-foco" src="Imagens/Depoimentos/depoimento-1.webp" alt="">
-                <img class="item-2" src="Imagens/Depoimentos/depoimento-2.webp" alt="">
-                <img class="item-2" src="Imagens/Depoimentos/depoimento-3.webp" alt="">
-                <img class="item-2" src="Imagens/Depoimentos/depoimento-4.webp" alt="">
-                <img id="ultimo-depoimento" class="item-2" src="Imagens/Depoimentos/depoimento-5.webp" alt="">
+                <div>
+                    <video controls class="item-2 item-foco" src="Imagens/Video/Depoimento1.mp4" alt="depoimentos loja cabelô">
+                </div>
             </div>
         </div>
 
@@ -1642,11 +1656,8 @@
             <button class="seta-esquerda-3 controles-3"><i class="fa-solid fa-chevron-left"></i></button>
 
             <div id="fotos">
-                <img class="item-3 item-foco" src="Imagens/Depoimentos/depoimento-1.webp" alt="">
-                <img class="item-3" src="Imagens/Depoimentos/depoimento-2.webp" alt="">
-                <img class="item-3" src="Imagens/Depoimentos/depoimento-3.webp" alt="">
-                <img class="item-3" src="Imagens/Depoimentos/depoimento-4.webp" alt="">
-                <img id="ultimo-depoimento" class="item-3" src="Imagens/Depoimentos/depoimento-5.webp" alt="">
+                <img class="item-3 item-foco" src="Imagens/Depoimentos/Depoimento1.png" alt="feedback loja cabelô">
+                <img class="item-3" src="Imagens/Depoimentos/Depoimento2.png" alt="feedback loja cabelô">
             </div>
 
             <div style="display: flex; justify-content: center;">
@@ -1871,38 +1882,41 @@
                     <div class="d-flex flex-column align-items-center caixa-valor">
                         <img class="img-fluid mt-5 mb-4" width="150" src="Imagens/logo.png" alt="">
 
-                        <h1>Faça sua <span class="azul">inscrição agora</span></h1>
+                        <h1>Qualidade + <span class="azul">preço competitivo</span></h1>
 
                         <ul class="navbar-nav align-items-center">
                             <li>
-                                <p><i class="fa-solid fa-check fa-xl"></i>Treinamento do zero ao avançado</p>
+                                <p><i class="fa-solid fa-check fa-xl"></i>Lista 100% validada</p>
                             </li>
                             <li>
-                                <p><i class="fa-solid fa-check fa-xl"></i>Método completo e detalhado</p>
+                                <p><i class="fa-solid fa-check fa-xl"></i>39 fornecedores selecionados</p>
                             </li>
                             <li>
-                                <p><i class="fa-solid fa-check fa-xl"></i>Suporte exclusivo com o produtor do conteúdo
+                                <p><i class="fa-solid fa-check fa-xl"></i>Cabelos premium
                                 </p>
+                            </li>
+                            <li>
+                                <p><i class="fa-solid fa-check fa-xl"></i>Loiro, escuro, cacheado e liso</p>
+                            </li>
+                            <li>
+                                <p><i class="fa-solid fa-check fa-xl"></i>Planilha para operar o método e fazer suas
+                                    operações</p>
+                            </li>
+                            <li>
+                                <p><i class="fa-solid fa-check fa-xl"></i>Fornecedores nacionais e importados</p>
                             </li>
                             <li>
                                 <p><i class="fa-solid fa-check fa-xl"></i>Acesso vitalício</p>
                             </li>
                             <li>
-                                <p><i class="fa-solid fa-check fa-xl"></i>Mais de 8 horas de aulas exclusivas</p>
-                            </li>
-                            <li>
-                                <p><i class="fa-solid fa-check fa-xl"></i>Backtest da estratégia</p>
-                            </li>
-                            <li>
-                                <p><i class="fa-solid fa-check fa-xl"></i>Planilha para operar o método e fazer suas
-                                    operações</p>
+                                <p><i class="fa-solid fa-check fa-xl"></i>Suporte direto pelo WhatsApp</p>
                             </li>
                             <li style="border-bottom: none;">
                                 <p><i class="fa-solid fa-check fa-xl"></i>Garantia</p>
                             </li>
                         </ul>
 
-                        <h2>De: <span class="vermelho">R$1.497,00</span> por apenas</h2>
+                        <h2>De: <span class="vermelho">R$1.439,00</span> por apenas</h2>
 
                         <h2><span class="azul">12x de</span></h2>
                         <h1 id="preco"><span class="azul">R$ 24,00</span></h1>
@@ -1920,13 +1934,11 @@
                         <img class="img-fluid" width="275" src="Imagens/Itens/Garantia-trader.png" alt="">
                     </div>
 
-                    <p id="garantia">Ainda está na dúvida se o treinamento é para você?</p>
+                    <p id="garantia">Mais margem e mais lucro para o seu negócio</p>
 
-                    <h1>Seu risco <span class="azul">é zero!</span></h1>
+                    <h1>Garanta seu <span class="azul">acesso agora.</span></h1>
 
-                    <p id="paragrafo-zero">Você pode ver algumas aulas do Treinamento Trader por 7 dias gratuitamente.
-                        Se por algum motivo você não gostar ou achar que não é para você, com um único e-mail receberá
-                        100% do seu dinheiro de volta.</p>
+                    <p id="paragrafo-zero">Clique e garanta agora o acesso à lista dos melhores fornecedores de cabelo humano. Após pagamento entrega de imediato da lista em pdf no seu email.</p>
 
                     <a class="btn btn-home" href="https://pay.kiwify.com.br/cTKqLn8" target="_blank">QUERO TER ACESSO A
                         LISTA</a>
@@ -1940,78 +1952,80 @@
         <div class="container">
             <div class="row d-flex flex-md-row justify-content-center">
                 <div class="d-flex flex-column justify-content-center col-11 col-md-4">
-                    <h1>Perguntas <span class="azul">Frequentes</span></h1>
+                    <h1>FAQ | Lista de <span class="azul">Fornecedores Validados</span> Frequentes</h1>
                 </div>
                 <div class="col-11 col-sm-11 col-md-11 col-lg-11 col-xl-8">
 
                     <div class="perguntas d-flex align-items-center justify-content-between caixa-conteudo">
-                        <h5>Estou começando do zero no mercado financeiro, o treinamento é para mim?</h5>
+                        <h5>Preciso ir pessoalmente para comprar o cabelo?</h5>
                         <i class="fa-solid fa-caret-down"></i>
                     </div>
                     <div class="pergunta-feita">
-                        Sim! Você aprenderá desde a abrir uma conta na corretora até a estratégia passo a passo. Além de
-                        ter suporte para tirar todas as suas dúvidas.
+                        Não. Todos os fornecedores já estão validados. Você pode negociar e comprar diretamente pelo WhatsApp, sem precisar viajar.
                     </div>
 
                     <div class="perguntas d-flex align-items-center justify-content-between caixa-conteudo">
-                        <h5>Consigo ter bons resultados mesmo tendo pouco tempo disponível?</h5>
+                        <h5>Como faço para entrar em contato com os fornecedores?</h5>
                         <i class="fa-solid fa-caret-down"></i>
                     </div>
                     <div class="pergunta-feita">
-                        Sim! Com o método, você conseguirá analisar com precisão qualquer mercado, não ficando preso
-                        apenas aos horários disponíveis da bolsa de valores brasileira.
+                        A lista contém 39 fornecedores com WhatsApp direto dos donos e Instagram de alguns deles. Basta chamar no WhatsApp e informar que veio através da lista do Wendel.
                     </div>
 
                     <div class="perguntas d-flex align-items-center justify-content-between caixa-conteudo">
-                        <h5>O método serve para qualquer ativo?</h5>
+                        <h5>De onde são esses fornecedores?</h5>
                         <i class="fa-solid fa-caret-down"></i>
                     </div>
                     <div class="pergunta-feita">
-                        Sim! Funciona para qualquer ativo e qualquer tempo gráfico.
+                        Tem fornecedores do Brasil, Paraguai, Índia e Vietnã.
                     </div>
 
                     <div class="perguntas d-flex align-items-center justify-content-between caixa-conteudo">
-                        <h5>Quais são as formas de pagamento?</h5>
+                        <h5>Tem fornecedor que vende cabelo brasileiro fino e extra fino?</h5>
                         <i class="fa-solid fa-caret-down"></i>
                     </div>
                     <div class="pergunta-feita">
-                        Você poderá utilizar 1 ou 2 cartões de crédito, podendo dividir em até 12 vezes. Também é
-                        possível pagar por meio de boleto ou pix à vista.
+                        Sim. Temos vários fornecedores que trabalham com cabelo brasileiro fino e extra fino. Inclusive, a lista contém 3 dos principais fornecedores do Sul do Brasil.
                     </div>
 
                     <div class="perguntas d-flex align-items-center justify-content-between caixa-conteudo">
-                        <h5>Com o método vou saber a hora certa de abrir e sair da operação?</h5>
+                        <h5>Tem fornecedor de cabelo vietnamita e indiano?</h5>
                         <i class="fa-solid fa-caret-down"></i>
                     </div>
                     <div class="pergunta-feita">
-                        Com certeza! Ao final do treinamento você analisará o mercado corretamente e, assim, poderá
-                        aproveitar as maiores e melhores entradas.
+                        Sim. A maioria dos fornecedores trabalha com cabelo indiano e vietnamita, com diferentes qualidades e preços. Você escolhe o padrão que melhor atende seu público.
                     </div>
 
                     <div class="perguntas d-flex align-items-center justify-content-between caixa-conteudo">
-                        <h5>Tenho pouco dinheiro para operar, o método funciona mesmo assim?</h5>
+                        <h5>Serve para quem está começando?</h5>
                         <i class="fa-solid fa-caret-down"></i>
                     </div>
                     <div class="pergunta-feita">
-                        Sim! O método CDM funciona independente do valor disponível que você possui para investir.
+                        Sim. Serve tanto para quem está começando quanto para quem já vende cabelo há anos. Fornecedor nunca é demais.
                     </div>
 
                     <div class="perguntas d-flex align-items-center justify-content-between caixa-conteudo">
-                        <h5>Por quanto tempo terei acesso ao treinamento?</h5>
+                        <h5>xiste quantidade mínima de compra?</h5>
                         <i class="fa-solid fa-caret-down"></i>
                     </div>
                     <div class="pergunta-feita">
-                        Você terá acesso vitalício, ou seja, pagará apenas uma vez e poderá ver o treinamento para
-                        sempre sem nenhum custo adicional.
+                        Depende do fornecedor. Alguns exigem quantidade mínima, outros permitem comprar pequenas quantidades para teste.
                     </div>
 
                     <div class="perguntas d-flex align-items-center justify-content-between caixa-conteudo">
-                        <h5>Não curti, quero cancelar. Como faço?</h5>
+                        <h5>Quantos contatos tem na lista?</h5>
                         <i class="fa-solid fa-caret-down"></i>
                     </div>
                     <div class="pergunta-feita">
-                        Mande um e-mail para suporte@ocaradomercado.com para solicitar o reembolso e tenha 100% do seu
-                        dinheiro de volta se estiver dentro dos 7 dias de garantia.
+                        A lista possui 39 fornecedores validados.
+                    </div>
+
+                    <div class="perguntas d-flex align-items-center justify-content-between caixa-conteudo">
+                        <h5>Você já comprou com esses fornecedores?</h5>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="pergunta-feita">
+                        Sim. Já comprei com a maioria deles. Os que ainda não comprei foram indicados por lojas confiáveis do mercado. Essa lista já impactou diretamente meu negócio.
                     </div>
 
                 </div>
@@ -2019,17 +2033,11 @@
         </div>
     </section>
 
-    <footer id="rodape" class="d-flex flex-column align-items-center">
+    <footer id="rodape" class="d-flex flex-column align-items-center justify-content-end">
         <img class="img-fluid" width="160" src="Imagens/logo.png" alt="">
 
-        <div>
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-        </div>
-
-        <p>Copyright &copy; Todos os direitos reservados | Feito pelo <a id="social"
-                href="https://www.instagram.com/devluizsilva" target="_blank">Programador Luiz Silva</a></p>
+        <p>Copyright &copy; 2026 | Todos os direitos reservados | Feito pelo <a id="social"
+                href="https://www.instagram.com/devluizsilva" target="_blank">Dev Luiz Silva</a></p>
 
     </footer>
 

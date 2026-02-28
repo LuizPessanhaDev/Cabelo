@@ -12,8 +12,9 @@ perguntas[4].addEventListener("click", abrirPergunta5)
 perguntas[5].addEventListener("click", abrirPergunta6)
 perguntas[6].addEventListener("click", abrirPergunta7)
 perguntas[7].addEventListener("click", abrirPergunta8)
+perguntas[8].addEventListener("click", abrirPergunta9)
 
-let aberta2 = [false, false, false, false, false, false, false, false]
+let aberta2 = [false, false, false, false, false, false, false, false, false]
 let largura3 = 0
 
 function recuperarLargura2(){
@@ -26,7 +27,7 @@ function abrirPergunta1(){
             perguntasFeitas[0].style.display = 'block'
 
             rodape.style.opacity = '0'
-            rodape.style.marginTop = '330px'
+            rodape.style.marginTop = '430px'
 
             icones2[24].classList.remove('fa-caret-down')
             icones2[24].classList.add('fa-caret-up')
@@ -102,7 +103,7 @@ function abrirPergunta2(){
             perguntasFeitas[1].style.display = 'block'
 
             rodape.style.opacity = '0'
-            rodape.style.marginTop = '330px'
+            rodape.style.marginTop = '430px'
 
             icones2[25].classList.remove('fa-caret-down')
             icones2[25].classList.add('fa-caret-up')
@@ -178,7 +179,7 @@ function abrirPergunta3(){
             perguntasFeitas[2].style.display = 'block'
 
             rodape.style.opacity = '0'
-            rodape.style.marginTop = '330px'
+            rodape.style.marginTop = '430px'
 
             icones2[26].classList.remove('fa-caret-down')
             icones2[26].classList.add('fa-caret-up')
@@ -254,7 +255,7 @@ function abrirPergunta4(){
             perguntasFeitas[3].style.display = 'block'
 
             rodape.style.opacity = '0'
-            rodape.style.marginTop = '330px'
+            rodape.style.marginTop = '430px'
 
             icones2[23].classList.remove('fa-caret-down')
             icones2[23].classList.add('fa-caret-up')
@@ -330,7 +331,7 @@ function abrirPergunta5(){
             perguntasFeitas[4].style.display = 'block'
 
             rodape.style.opacity = '0'
-            rodape.style.marginTop = '330px'
+            rodape.style.marginTop = '430px'
 
             icones2[28].classList.remove('fa-caret-down')
             icones2[28].classList.add('fa-caret-up')
@@ -406,7 +407,7 @@ function abrirPergunta6(){
             perguntasFeitas[5].style.display = 'block'
 
             rodape.style.opacity = '0'
-            rodape.style.marginTop = '330px'
+            rodape.style.marginTop = '430px'
 
             icones2[29].classList.remove('fa-caret-down')
             icones2[29].classList.add('fa-caret-up')
@@ -482,7 +483,7 @@ function abrirPergunta7(){
             perguntasFeitas[6].style.display = 'block'
 
             rodape.style.opacity = '0'
-            rodape.style.marginTop = '330px'
+            rodape.style.marginTop = '430px'
 
             icones2[30].classList.remove('fa-caret-down')
             icones2[30].classList.add('fa-caret-up')
@@ -558,7 +559,7 @@ function abrirPergunta8(){
             perguntasFeitas[7].style.display = 'block'
 
             rodape.style.opacity = '0'
-            rodape.style.marginTop = '330px'
+            rodape.style.marginTop = '430px'
 
             icones2[31].classList.remove('fa-caret-down')
             icones2[31].classList.add('fa-caret-up')
@@ -619,6 +620,83 @@ function abrirPergunta8(){
 
             icones2[31].classList.remove('fa-caret-up')
             icones2[31].classList.add('fa-caret-down')
+
+            if(aberta2[0] == false && aberta2[1] == false && aberta2[2] == false && aberta2[3] == false && aberta2[4] == false && aberta2[5] == false && aberta2[6] == false && aberta2[7] == false){
+                rodape.style.opacity = '1'
+                perguntasTamanho.style.height = '860px'
+            }
+        }
+    }
+}
+
+function abrirPergunta9(){
+
+    if(largura3 >= 1200){
+        if(aberta2[8] == false){
+            perguntasFeitas[8].style.display = 'block'
+
+            rodape.style.opacity = '0'
+            rodape.style.marginTop = '430px'
+
+            icones2[32].classList.remove('fa-caret-down')
+            icones2[32].classList.add('fa-caret-up')
+
+            aberta2[8] = true
+
+        } else if(aberta2[8] == true){
+            perguntasFeitas[8].style.display = 'none'
+            aberta2[8] = false
+
+            icones2[32].classList.remove('fa-caret-up')
+            icones2[32].classList.add('fa-caret-down')
+
+            if(aberta2[0] == false && aberta2[1] == false && aberta2[2] == false && aberta2[3] == false && aberta2[4] == false && aberta2[5] == false && aberta2[6] == false && aberta2[7] == false && aberta2[8] == false){
+                rodape.style.opacity = '1'
+                rodape.style.marginTop = '0px'
+            }
+        }
+    } else if(largura3 >= 576 && largura3 < 1200){
+        if(aberta2[8] == false){
+            perguntasFeitas[8].style.display = 'block'
+
+            rodape.style.opacity = '0'
+            perguntasTamanho.style.height = '1300px'
+
+            icones2[32].classList.remove('fa-caret-down')
+            icones2[32].classList.add('fa-caret-up')
+
+            aberta2[8] = true
+
+        } else if(aberta2[8] == true){
+            perguntasFeitas[8].style.display = 'none'
+            aberta2[8] = false
+
+            icones2[32].classList.remove('fa-caret-up')
+            icones2[32].classList.add('fa-caret-down')
+
+            if(aberta2[7] == false && aberta2[1] == false && aberta2[2] == false && aberta2[3] == false && aberta2[4] == false && aberta2[5] == false && aberta2[6] == false && aberta2[0] == false){
+                rodape.style.opacity = '1'
+                perguntasTamanho.style.height = '860px'
+            }
+        }
+    } else if(largura3 <= 520){
+        if(aberta2[8] == false){
+            perguntasFeitas[8].style.display = 'block'
+
+            rodape.style.opacity = '0'
+            perguntasTamanho.style.height = '1750px'
+
+            icones2[32].classList.remove('fa-caret-down')
+            icones2[32].classList.add('fa-caret-up')
+
+            aberta2[8] = true
+
+        } else if(aberta2[8] == true){
+            perguntasFeitas[8].style.display = 'none'
+            aberta2[8] = false
+
+            icones2[32].classList.remove('fa-caret-up')
+            icones2[32].classList.add('fa-caret-down')
 
             if(aberta2[0] == false && aberta2[1] == false && aberta2[2] == false && aberta2[3] == false && aberta2[4] == false && aberta2[5] == false && aberta2[6] == false && aberta2[7] == false){
                 rodape.style.opacity = '1'

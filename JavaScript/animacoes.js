@@ -93,19 +93,19 @@ function animacoes(){
             animacao1[3].classList.add('padrao')
         }
     
-        if(rolagem > 5300){
-            //Titulos - seções conteudo
-            animacao1[4].classList.remove('animacao-1')
-            animacao1[4].classList.add('padrao')
+        // if(rolagem > 5300){
+        //     //Titulos - seções conteudo
+        //     animacao1[4].classList.remove('animacao-1')
+        //     animacao1[4].classList.add('padrao')
     
-            //paragrafos
-            animacao2[9].classList.remove('animacao-2')
-            animacao2[9].classList.add('padrao')
+        //     //paragrafos
+        //     animacao2[9].classList.remove('animacao-2')
+        //     animacao2[9].classList.add('padrao')
     
-            //botoes
-            animacao3[4].classList.remove('animacao-3')
-            animacao3[4].classList.add('padrao')
-        }
+        //     //botoes
+        //     animacao3[4].classList.remove('animacao-3')
+        //     animacao3[4].classList.add('padrao')
+        // }
     
         if(rolagem > 6450){
             //botoes
