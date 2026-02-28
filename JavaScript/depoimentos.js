@@ -32,3 +32,40 @@ controles2.forEach(controle2 => {
         itens2[itemFoco2].classList.add('item-foco')
     })
 })
+
+//DEPOIMENTOS 2
+
+const controles3 = document.querySelectorAll('.controles-3') /*Constante (Array) dos botões*/
+const itens3 = document.querySelectorAll('.item-3') /*Constante das fotos*/
+const maxItens3 = itens3.length /*Constante do número máximo de fotos*/
+
+let itemFoco3 = 0 /*Valor da foto em foco*/
+
+controles3.forEach(controle3 => {
+    controle3.addEventListener('click', () => {
+        const esquerda3 = controle3.classList.contains('seta-esquerda-3')
+
+        if(esquerda3){ /*Sem operador lógico >> constante boolean*/
+            itemFoco3 -= 1
+        } else {
+            itemFoco3 += 1
+        }
+
+        if(itemFoco3 >= maxItens3){
+            itemFoco3 = 0
+        }
+
+        if(itemFoco3 < 0){
+            itemFoco3 = maxItens3 - 1
+        }
+
+        itens3.forEach(item3 => item3.classList.remove('item-foco'))
+
+        itens3[itemFoco3].scrollIntoView({
+            block: "center",
+            inline: "center"
+        })  
+
+        itens3[itemFoco3].classList.add('item-foco')
+    })
+})
