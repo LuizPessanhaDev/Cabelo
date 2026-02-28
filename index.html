@@ -64,6 +64,10 @@
             height: 800px;
         }
 
+        header a{
+            font-size: 24px;
+        }
+
         header h1 #span1 {
             font-size: 75px;
             color: white;
@@ -692,12 +696,52 @@
 
         @media (max-width: 518.98px) {
 
+            #home img{
+                padding-top: 25px;
+            }
+
+            header h1{
+                line-height: 36px;
+            }
+
+            header h1 #span1 {
+                font-size: 50px;
+                color: white;
+            }
+
+            header h1 #span2 {
+                font-size: 45px;
+                color: var(--cor1);
+            }
+
+            header h1 #span3 {
+                font-size: 45px;
+                color: var(--cor1);
+            }
+
+            header h2 #span1 {
+                font-size: 27px;
+                font-weight: lighter;
+                color: white;
+            }
+
+            header h2 #span2 {
+                font-size: 23px;
+                font-weight: lighter;
+                color: white;
+            }
+
+            header h2 {
+                line-height: 30px;
+                padding-bottom: 10px;
+                padding-left: 4px;
+            }
+
             section {
                 overflow: hidden;
             }
 
             h1 {
-                padding: 5px 0 15px 0;
                 font-size: 20px;
                 line-height: 30px;
             }
@@ -735,6 +779,7 @@
     =================*/
 
             #home {
+                height: 1200px;
                 background-image: url('Imagens/Fundos_Mobile/fundo1.png');
                 background-position: top center;
                 background-repeat: no-repeat;
@@ -751,15 +796,25 @@
                 width: 350px;
             }
 
+            #home a{
+                padding-top: 12px;
+                font-size: 19px;
+            }
+
             /*Sobre
     =================*/
 
             #sobre {
+                height: 1300px;
                 background-image: url('Imagens/Fundos_Mobile/fundo2.png');
                 background-position: top center;
                 background-repeat: no-repeat;
                 background-size: cover;
-                padding-top: 250px;
+                padding-top: 530px;
+            }
+
+            #sobre h1{
+                font-size: 38px;
             }
 
             #sobre .btn {
@@ -770,11 +825,12 @@
     =================*/
 
             #dinheiro {
+                height: 1550px;
                 background-image: url('Imagens/Fundos_Mobile/fundo3.png');
                 background-position: top center;
                 background-repeat: no-repeat;
                 background-size: cover;
-                padding-top: 200px;
+                padding-top: 670px;
             }
 
             #dinheiro .btn {
@@ -1296,6 +1352,32 @@
             }
 
         }
+
+        @keyframes whatsapp {
+            from {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.15);
+            }
+
+            to {
+                transform: scale(1);
+            }
+        }
+
+        #whats {
+            animation: whatsapp 2.5s infinite ease-in-out;
+            position: fixed;
+            right: 35px;
+            bottom: 35px;
+        }
+
+        #whats a img {
+            width: 100px;
+            height: 100px;
+        }
     </style>
 
 </head>
@@ -1319,7 +1401,7 @@
                     <video src="Imagens/Video/Treinamento Trader - O Cara do Mercado.mp4"
                         poster="Imagens/Video/Thumb.jpg" controls></video>
 
-                    <a style="font-size: 24px;" class="btn btn-home " href="https://pay.kiwify.com.br/cTKqLn8"
+                    <a class="btn btn-home " href="https://pay.kiwify.com.br/cTKqLn8"
                         target="_blank">QUERO TER ACESSO A LISTA</a>
                 </div>
             </div>
@@ -1436,7 +1518,7 @@
             </div>
 
         </div>
-        
+
     </section>
 
     <!-- SCREEN OFF -->
@@ -1814,6 +1896,10 @@
                 href="https://www.instagram.com/devluizsilva" target="_blank">Programador Luiz Silva</a></p>
 
     </footer>
+
+    <div id="whats">
+        <a href="https://wa.me/+557186257997" target="_blank"><img src="Imagens/Whats.png" alt="whatsapp"></a>
+    </div>
 
     <script src="JavaScript/metodos.js"></script>
     <script src="JavaScript/depoimentos.js"></script>
