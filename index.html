@@ -1,0 +1,1827 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Imagens/favicon.ico" type="image/x-icon">
+    <title>Treinamento Trader</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <!--Font Awesone-->
+    <script src="https://kit.fontawesome.com/4fe87b1342.js" crossorigin="anonymous"></script>
+
+    <!-- Fim Bootstrap -->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sora:wght@100..800&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            transition: all 0.75s;
+            font-family: "Sora", sans-serif;
+        }
+
+        :root {
+            --cor1: #4F77FF;
+            --cor2: #0476D9;
+            --cor3: #ec2e88;
+            --cor4: #03258C;
+            --cor5: #000227;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+            background-color: black;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: var(--cor1);
+        }
+
+        /*Gerais
+-----------*/
+        body {
+            background-color: black;
+        }
+
+        section {
+            height: 800px;
+        }
+
+        header h1 #span1 {
+            font-size: 75px;
+            color: white;
+        }
+
+        header h1 #span2 {
+            font-size: 75px;
+            color: var(--cor1);
+        }
+
+        header h1 #span3 {
+            font-size: 82px;
+            color: var(--cor1);
+        }
+
+        header h2 #span1 {
+            font-size: 30px;
+            font-weight: lighter;
+            color: white;
+        }
+
+        header h2 #span2 {
+            font-size: 25px;
+            font-weight: lighter;
+            color: white;
+        }
+
+        header h2 {
+            line-height: 30px;
+            padding-bottom: 10px;
+            padding-left: 4px;
+        }
+
+        header h1,
+        header h2 {
+            text-shadow: -3px 3px 3px black;
+        }
+
+        h1 {
+            color: white;
+            font-size: 33px;
+            font-weight: 700;
+            line-height: 52px;
+        }
+
+        h2 {
+            color: white;
+            font-weight: 700;
+            line-height: 50px;
+        }
+
+        h4 {
+            color: white;
+            line-height: 50px;
+        }
+
+        h5 {
+            font-size: 22px;
+            color: white;
+            margin: 0 0 0 15px;
+        }
+
+        p {
+            font-size: 18.5px;
+            color: white;
+            padding: 10px 0;
+            line-height: 19.5px;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        button:hover a {
+            color: #ec2e88;
+        }
+
+        ul li {
+            width: 470px;
+            border-bottom: 1px solid #333333;
+        }
+
+        ul li p {
+            padding: 10px 0;
+            margin: 0;
+            font-size: 15px;
+        }
+
+        ul li i {
+            color: var(--cor1);
+            padding: 0 10px 0 0;
+        }
+
+        /*Classes
+-----------*/
+        .container {
+            padding: 0;
+        }
+
+        .caixa-conteudo {
+            background-color: var(--cor1);
+            height: 60px;
+            margin: 12px 0;
+        }
+
+        .caixa-conteudo-2 {
+            background-color: var(--cor1);
+            height: 60px;
+            margin: 12px 0;
+        }
+
+        .caixa-conteudo:hover {
+            cursor: pointer;
+        }
+
+        .caixa-conteudo-2:hover {
+            cursor: pointer;
+        }
+
+        .informa {
+            display: none;
+        }
+
+        .informa-2 {
+            display: none;
+        }
+
+        .pergunta-feita {
+            display: none;
+            color: white;
+            padding: 0 20px 15px 20px;
+        }
+
+        .caixa-valor {
+            background-color: #0D0D0D;
+            border-radius: 40px 0px 40px 0px;
+            border: 25px;
+            height: 90%;
+        }
+
+        .row {
+            height: 800px;
+        }
+
+        .azul {
+            color: var(--cor1);
+            font-weight: 700;
+        }
+
+        .vermelho {
+            color: red;
+            text-decoration: line-through;
+        }
+
+        .btn {
+            color: white;
+            font-weight: 600;
+            letter-spacing: 1px;
+            background-color: var(--cor3);
+            border-radius: 50px;
+            width: 570px;
+            height: 55px;
+            transition: all 0.7s;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            color: var(--cor3);
+            background-color: white;
+            transform: scale(1.10);
+            transition: all 0.4s;
+        }
+
+        #sobre .btn,
+        #dinheiro .btn,
+        #ensino .btn,
+        #acesso .btn {
+            padding: 10px 0 0 0;
+            width: 310px;
+            height: 47px;
+        }
+
+        /*Home
+-----------*/
+        #home {
+            background-image: url('Imagens/Fundos/Fundo-1.png');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 860px;
+        }
+
+        #home img {
+            padding-bottom: 15px;
+        }
+
+        #home video {
+            width: 570px;
+            height: 321px;
+            margin-bottom: 25px;
+            border-radius: 20px;
+            border: 2px solid var(--cor1);
+        }
+
+        /*Sobre
+-----------*/
+        #sobre {
+            height: 900px;
+            margin: 70px 0;
+            overflow: hidden;
+            background-image: url('Imagens/Fundos/Fundo-2.png');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #sobre h1 {
+            font-size: 38px;
+            line-height: 33px;
+        }
+
+        #sobre h1 #span1-2 {
+            padding-top: 10px;
+            font-weight: lighter;
+            font-size: 24px;
+            line-height: 0px;
+        }
+
+        /*Dinheiro
+-----------*/
+        #dinheiro {
+            height: 875px;
+            margin: 50px 0 70px 0;
+            overflow: hidden;
+            background-image: url('Imagens/Fundos/Fundo-3.png');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #dinheiro h1 {
+            font-size: 38px;
+            line-height: 33px;
+        }
+
+        #dinheiro #span1-3 {
+            font-weight: lighter;
+            font-size: 24px;
+            line-height: 0px;
+        }
+
+        /*Ensino
+-----------*/
+        #ensino {
+            overflow: hidden;
+            height: 788px;
+            background-image: url('Imagens/Fundos/Fundo-4.jpg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /*Metodos
+-----------*/
+        #metodos {
+            margin-top: 125px;
+        }
+
+        #metodos h1 {
+            text-align: center;
+        }
+
+        #metodos p {
+            text-align: center;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        #metodos button:focus {
+            outline: none;
+        }
+
+        #metodos button:hover {
+            color: white;
+            cursor: pointer;
+        }
+
+        #container {
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .seta-esquerda {
+            position: absolute;
+            background-color: transparent;
+            top: 0;
+            left: 0;
+            right: auto;
+            bottom: 0;
+            width: 55px;
+            border: none;
+            font-size: 30px;
+            color: var(--cor3);
+            z-index: 1;
+        }
+
+        .seta-direita {
+            position: absolute;
+            background-color: transparent;
+            top: 0;
+            left: auto;
+            right: 0;
+            bottom: 0;
+            width: 55px;
+            border: none;
+            font-size: 30px;
+            color: var(--cor3);
+            z-index: 1;
+        }
+
+        #fotos {
+            height: 600px;
+            padding: 0 400px;
+            display: flex;
+            flex-wrap: nowrap;
+            overflow: hidden;
+            align-items: center;
+        }
+
+        #metodos img {
+            width: 400px;
+            height: 440px;
+            padding: 15px;
+            margin: 30px;
+            border-radius: 30px;
+        }
+
+        .item {
+            transform: skewY(12deg);
+            opacity: 0.7;
+        }
+
+        .item-esquerda {
+            opacity: 0.7;
+            transform: skewY(-12deg);
+        }
+
+        .item-foco {
+            opacity: 1;
+            transform: skewY(0deg) scale(1.25);
+        }
+
+        /*Informações
+-----------*/
+        #info {
+            height: 900px;
+            overflow: hidden;
+            padding-top: 30px;
+        }
+
+        #info #modulos-conteudos {
+            height: 360px;
+        }
+
+        #info #modulos-conteudos p {
+            font-size: 15px;
+            text-align: start;
+            margin: 0 25px;
+            padding-top: 0;
+        }
+
+        #info .row {
+            height: 100px;
+        }
+
+        #info p {
+            text-align: center;
+            width: 75%;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+
+        #info .btn {
+            width: 700px;
+            margin: auto;
+        }
+
+        #info .container>h1 {
+            text-align: center;
+        }
+
+        .caixa-conteudo i {
+            color: var(--cor3);
+            font-size: 18px;
+            background-color: white;
+            margin-right: 20px;
+            border-radius: 2px;
+            padding: 2px 4px;
+        }
+
+        .caixa-conteudo-2 i {
+            color: var(--cor3);
+            font-size: 18px;
+            background-color: white;
+            margin-right: 20px;
+            border-radius: 2px;
+            padding: 2px 4px;
+        }
+
+        /*Depoimentos
+-----------*/
+
+        #depoimentos button:focus {
+            outline: none;
+        }
+
+        #depoimentos button:hover {
+            cursor: pointer;
+            color: white;
+        }
+
+        #depoimentos img {
+            width: 400px;
+            height: 400px;
+            margin: 0 50px;
+        }
+
+        #depoimentos h1 {
+            text-align: center;
+        }
+
+        #container-2 {
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .seta-esquerda-2 {
+            position: absolute;
+            background-color: transparent;
+            top: 0;
+            left: 0;
+            right: auto;
+            bottom: 0;
+            width: 55px;
+            border: none;
+            font-size: 30px;
+            color: var(--cor3);
+            z-index: 1;
+        }
+
+        .seta-direita-2 {
+            position: absolute;
+            background-color: transparent;
+            top: 0;
+            left: auto;
+            right: 0;
+            bottom: 0;
+            width: 55px;
+            border: none;
+            font-size: 30px;
+            color: var(--cor3);
+            z-index: 1;
+        }
+
+
+        /*Acesso
+-----------*/
+        #acesso {
+            height: 610px;
+            background-image: url('Imagens/Fundos/Fundo-5.jpg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /*Inscrição
+------------*/
+        #inscricao {
+            height: 900px;
+            margin-bottom: 500px;
+            padding-top: 150px;
+            background-image: url('Imagens/Fundos/Fundo-6.jpg');
+            background-position: right top;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #inscricao .row {
+            height: 1090px;
+        }
+
+        #inscricao h1 {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        #inscricao h5 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #inscricao h1#preco {
+            font-size: 94px;
+            margin: 18px 0;
+        }
+
+        #inscricao .btn {
+            width: 450px;
+            margin-top: 25px;
+        }
+
+        #inscricao #garantia {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #274ED2;
+            border-radius: 20px 0;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        /*Perguntas
+-------------*/
+        #perguntas {
+            height: 750px;
+        }
+
+        #perguntas h1 {
+            text-align: center;
+            padding-bottom: 200px;
+        }
+
+        #perguntas h5 {
+            font-size: 16px;
+        }
+
+        /*Rodape
+-------------*/
+        #rodape {
+            height: 180px;
+            background-color: var(--cor1);
+        }
+
+        #rodape img {
+            margin: 15px 0;
+        }
+
+        #rodape i {
+            background-color: white;
+            border-radius: 15px;
+            margin: 4px 5px;
+            font-size: 35px;
+            padding: 3px 5px 2px 5px;
+            color: var(--cor1);
+        }
+
+        #rodape i:hover {
+            transform: scale(1.25);
+        }
+
+        #rodape p {
+            font-size: 16px;
+        }
+
+        #rodape a#social {
+            font-weight: bold;
+            color: black;
+            text-decoration: none;
+        }
+
+        #rodape a#social:hover {
+            color: white;
+            font-size: 18px;
+            padding-bottom: 2px;
+            border-bottom: 3px solid white;
+        }
+
+        /*Classes Animações
+------------------------*/
+        .animacao-1 {
+            transform: translateX(-550px);
+            opacity: 0;
+            cursor: default;
+        }
+
+        .animacao-2 {
+            transform: translateX(650px);
+            opacity: 0;
+            cursor: default;
+        }
+
+        .animacao-3 {
+            transform: translateY(75px);
+            opacity: 0;
+            cursor: default;
+        }
+
+        .animacao-4 {
+            transform: translateY(-50px);
+            opacity: 0;
+            cursor: default;
+        }
+
+        .animacao-5 {
+            transform: translateX(-500px);
+            opacity: 0;
+            cursor: default;
+        }
+
+        .animacao-6 {
+            transform: translateX(500px);
+            opacity: 0;
+            cursor: default;
+        }
+
+        .padrao {
+            transform: translateX(0px);
+            opacity: 1;
+            cursor: auto;
+        }
+
+        /* ==============================
+            MEDIA QUERY
+        ================================*/
+
+        @media (max-width: 518.98px) {
+
+            section {
+                overflow: hidden;
+            }
+
+            h1 {
+                padding: 5px 0 15px 0;
+                font-size: 20px;
+                line-height: 30px;
+            }
+
+            h2 {
+                font-size: 25px;
+            }
+
+            p {
+                font-size: 12px;
+                padding: 2px 0;
+            }
+
+            /*Classes
+    =================*/
+
+            .container {
+                padding: 0 15px;
+            }
+
+            .caixa-valor {
+                height: 950px;
+            }
+
+            .row {
+                height: 565px;
+            }
+
+            .col-10 {
+                padding-right: 0px;
+                padding-left: 0px;
+            }
+
+            /*Gerais
+    =================*/
+
+            #home {
+                background-image: url('Imagens/Fundos_Mobile/fundo1.png');
+                background-position: top center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding-bottom: 400px;
+            }
+
+            #home video {
+                width: 350px;
+                height: 199px;
+            }
+
+            #home .btn {
+                width: 350px;
+            }
+
+            /*Sobre
+    =================*/
+
+            #sobre {
+                background-image: url('Imagens/Fundos_Mobile/fundo2.png');
+                background-position: top center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding-top: 250px;
+            }
+
+            #sobre .btn {
+                margin: 15px auto 0 auto;
+            }
+
+            /*Dinheiro
+    =================*/
+
+            #dinheiro {
+                background-image: url('Imagens/Fundos_Mobile/fundo3.png');
+                background-position: top center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding-top: 200px;
+            }
+
+            #dinheiro .btn {
+                margin: 15px auto 0 auto;
+            }
+
+            /*Ensino
+    =================*/
+
+            #ensino {
+                background-image: url('Imagens/Fundos_Mobile/fundo4.png');
+                background-position: top center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding-top: 300px;
+            }
+
+            #ensino .btn {
+                margin: 15px auto 0 auto;
+            }
+
+            /*Metodos
+    =================*/
+
+            #metodos h1 {
+                margin-bottom: 0;
+                padding: 30px;
+            }
+
+            #metodos img {
+                border-radius: 60px;
+            }
+
+            #fotos {
+                padding: 0;
+            }
+
+            /*Info
+    =================*/
+
+            #info {
+                height: 1100px;
+            }
+
+            #info #modulos-conteudos {
+                height: 200px;
+                margin-bottom: 470px;
+            }
+
+            #info #modulos-conteudos p {
+                margin: 0 auto;
+            }
+
+            #info .col-md-5 {
+                height: 320px;
+            }
+
+            #info .btn {
+                width: 250px;
+            }
+
+            .caixa-conteudo {
+                margin: 20px auto;
+            }
+
+            .caixa-conteudo-2 {
+                margin: 20px auto;
+            }
+
+            /*Depoimentos
+    ==================*/
+
+            #depoimentos {
+                height: 850px;
+            }
+
+            #depoimentos img {
+                margin: 0 70px;
+                padding-left: 2px;
+            }
+
+            /*Acesso
+    ==================*/
+
+            #acesso {
+                height: 750px;
+                background-image: url('Imagens/Fundos_Mobile/fundo5.png');
+                background-position: top center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding-top: 390px;
+            }
+
+            #acesso .btn {
+                margin: 12px auto;
+            }
+
+            /*Inscricao
+    ==================*/
+
+            #inscricao {
+                height: 1600px;
+                padding-top: 100px;
+                margin-bottom: 75px;
+                background-image: none;
+            }
+
+            #inscricao .btn {
+                width: 320px;
+            }
+
+            #inscricao img {
+                width: 320px;
+            }
+
+            #paragrafo-zero {
+                text-align: center;
+            }
+
+            #inscricao h2 {
+                font-size: 22px;
+                height: 35px;
+                margin: 0;
+            }
+
+            #inscricao h5 {
+                margin: 0;
+            }
+
+            #inscricao h1#preco {
+                font-size: 55px;
+                padding: 5px 0;
+            }
+
+            #inscricao #garantia {
+                width: auto;
+                padding: 10px;
+                font-size: 12px;
+            }
+
+            ul {
+                padding-bottom: 20px;
+            }
+
+            ul li {
+                width: 80%;
+            }
+
+            ul li p {
+                font-size: 12px;
+            }
+
+            /*Perguntas
+    =================*/
+
+            #perguntas {
+                height: 860px;
+            }
+
+            #perguntas h1 {
+                padding-bottom: 0;
+            }
+
+            /*Rodape
+    ==================*/
+            #rodape {
+                height: 215px;
+            }
+
+            #rodape p {
+                padding: 15px;
+                text-align: center;
+                font-size: 14px;
+            }
+
+        }
+
+        @media (min-width: 519px) and (max-width: 991.98px) {
+
+            section {
+                overflow: hidden;
+            }
+
+            h1 {
+                font-size: 28px;
+                line-height: 40px;
+            }
+
+            /*Classes
+    =================*/
+
+            /*Gerais
+    =================*/
+
+            #home {
+                height: 1500px;
+                background-image: url('Imagens/Fundos_Mobile/fundo1.png');
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding-bottom: 400px;
+            }
+
+            #home video {
+                width: 100%;
+                height: 65%;
+            }
+
+            #home .btn {
+                width: 60%;
+            }
+
+            /*Sobre
+    =================*/
+
+            #sobre {
+                height: 1200px;
+                background-image: url('Imagens/Fundos_Mobile/fundo2.png');
+                background-position: top center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding-top: 450px;
+            }
+
+            /*Dinheiro
+    =================*/
+
+            #dinheiro {
+                height: 1300px;
+                background-image: url('Imagens/Fundos_Mobile/fundo3.png');
+                background-position: top center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding-top: 400px;
+            }
+
+            /*Ensino
+    =================*/
+
+            #ensino {
+                height: 1200px;
+                background-image: url('Imagens/Fundos_Mobile/fundo4.png');
+                background-position: top center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding-top: 460px;
+            }
+
+            /*Metodos
+    =================*/
+
+            #fotos {
+                padding-left: 200px;
+            }
+
+            /*Info
+    =================*/
+
+            #info {
+                height: 1100px;
+            }
+
+            #info .btn {
+                width: 70%;
+            }
+
+            /*Depoimentos
+    ==================*/
+
+            #depoimentos {
+                height: 850px;
+            }
+
+            /*Acesso
+    ==================*/
+
+            #acesso {
+                height: 1100px;
+                background-image: url('Imagens/Fundos_Mobile/fundo5.png');
+                background-position: top center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding-top: 390px;
+            }
+
+            /*Inscricao
+    ==================*/
+
+            #inscricao {
+                height: 1600px;
+                padding-top: 100px;
+                margin-bottom: 75px;
+                background-image: none;
+            }
+
+            #inscricao #garantia {
+                font-size: 18px;
+            }
+
+            ul li p {
+                font-size: 16px;
+            }
+
+            .caixa-valor {
+                height: 950px;
+                margin-bottom: 65px;
+            }
+
+            /*Perguntas
+    =================*/
+
+            #perguntas {
+                height: 860px;
+            }
+
+            #perguntas h1 {
+                padding-bottom: 0px;
+            }
+
+            #perguntas h5 {
+                font-size: 18px;
+            }
+
+            /*Rodape
+    ==================*/
+            #rodape {
+                height: 215px;
+            }
+
+        }
+
+        @media (min-width: 992px) and (max-width: 1198.98px) {
+
+            section {
+                overflow: hidden;
+            }
+
+            h1 {
+                font-size: 38px;
+                line-height: 50px;
+            }
+
+            h5 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 28px;
+            }
+
+            /*Classes
+    =================*/
+
+            .btn {
+                font-size: 24px;
+            }
+
+            #sobre .btn,
+            #dinheiro .btn,
+            #ensino .btn,
+            #acesso .btn {
+                width: 400px;
+                height: 60px;
+            }
+
+            /*Gerais
+    =================*/
+
+            #home {
+                height: 2000px;
+                background-image: url('Imagens/Fundos_Mobile/fundo1.png');
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding-bottom: 400px;
+            }
+
+            #home .row {
+                padding-top: 100px;
+            }
+
+            #home video {
+                width: 100%;
+                height: 65%;
+            }
+
+            #home .btn {
+                width: 66%;
+                height: 60px;
+            }
+
+            /*Sobre
+    =================*/
+
+            #sobre {
+                height: 1400px;
+                background-image: url('Imagens/Fundos_Mobile/fundo2.png');
+                background-position: top center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding-top: 650px;
+            }
+
+            /*Dinheiro
+    =================*/
+
+            #dinheiro {
+                height: 1600px;
+                background-image: url('Imagens/Fundos_Mobile/fundo3.png');
+                background-position: top center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding-top: 600px;
+            }
+
+            /*Ensino
+    =================*/
+
+            #ensino {
+                height: 1700px;
+                background-image: url('Imagens/Fundos_Mobile/fundo4.png');
+                background-position: top center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding-top: 750px;
+            }
+
+            /*Metodos
+    =================*/
+
+            #fotos {
+                padding-left: 320px;
+            }
+
+            /*Info
+    =================*/
+
+            #info {
+                height: 1100px;
+            }
+
+            #info .btn {
+                width: 70%;
+            }
+
+            /*Depoimentos
+    ==================*/
+
+            #depoimentos {
+                height: 850px;
+            }
+
+            /*Acesso
+    ==================*/
+
+            #acesso {
+                height: 1300px;
+                background-image: url('Imagens/Fundos_Mobile/fundo5.png');
+                background-position: top center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding-top: 550px;
+            }
+
+            /*Inscricao
+    ==================*/
+
+            #inscricao {
+                height: 1900px;
+                padding-top: 100px;
+                margin-bottom: 75px;
+                background-image: none;
+            }
+
+            #inscricao #bancos {
+                width: 500px;
+            }
+
+            #inscricao #garantia {
+                font-size: 24px;
+            }
+
+            .caixa-valor {
+                height: 1050px;
+                margin-bottom: 65px;
+            }
+
+            ul li {
+                width: 600px;
+            }
+
+            ul li p {
+                font-size: 20px;
+            }
+
+            /*Perguntas
+    =================*/
+
+            #perguntas {
+                height: 860px;
+            }
+
+            #perguntas h1 {
+                padding-bottom: 0px;
+            }
+
+            #perguntas h5 {
+                font-size: 22px;
+            }
+
+            /*Rodape
+    ==================*/
+            #rodape {
+                height: 215px;
+            }
+
+            #rodape p {
+                font-size: 24px;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body onscroll="animacoes()" onload="animacoes(), recuperarLargura(), recuperarLargura2()">
+    <header id="home"> <!-- Home -->
+        <div class="container">
+            <div class="row align-items-center justify-content-center justify-content-md-start">
+
+                <div class="col-10 col-sm-12 col-md-12 col-lg-12 col-xl-7 d-flex flex-column">
+                    <img class="img-fluid navbar-brand" width="315" src="Imagens/logo.png" alt="logo">
+
+                    <h1><span id="span1">MAPA DO </span><br>
+                        <span id="span2">FORNECEDOR</span><br>
+                        <span id="span3">DE CABELO</span><br>
+                    </h1>
+
+                    <h2><span id="span1">39 Contatos Exclusivos<br><span id="span2">(Brasileiros &
+                                Internacional)</span></span></h2>
+
+                    <video src="Imagens/Video/Treinamento Trader - O Cara do Mercado.mp4"
+                        poster="Imagens/Video/Thumb.jpg" controls></video>
+
+                    <a style="font-size: 24px;" class="btn btn-home " href="https://pay.kiwify.com.br/cTKqLn8"
+                        target="_blank">QUERO TER ACESSO A LISTA</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="sobre"> <!-- Sobre -->
+        <div class="container">
+            <div
+                class="row align-items-center d-flex justify-content-center justify-content-md-start flex-column flex-row-reverse">
+                <div class="col-10 col-sm-12 col-md-12 col-lg-12 col-xl-6 d-flex flex-column mt-5">
+                    <h1 class="anima-1 animacao-1">Por que ter acesso <span class="azul">à minha lista de
+                            fornecedores?</span></span><br>
+
+                        <span id="span1-2">Porque errar fornecedor no mercado de cabelo sai caro.</span>
+                    </h1>
+
+                    <p style="margin-top: 10px;" class="anima-2 animacao-2">Golpes, qualidade baixa, atraso, fornecedor
+                        que some… tudo isso pode
+                        travar o crescimento da sua loja. <br><br>
+
+                        Eu já testei, já comprei, já filtrei.
+                        Essa lista é resultado de experiência real, dinheiro investido e validação prática.</p>
+
+                    <p class="anima-2 animacao-2">Não são contatos aleatórios.
+                        São 39 fornecedores brasileiros e importados que já passaram pelo meu critério. <br>Com ela
+                        você:<br><br>
+
+
+                        <i class="fa-solid fa-check fa-xl azul"></i> Economiza tempo <br><br>
+                        <i class="fa-solid fa-check fa-xl azul"></i> Reduz riscos
+                        <br><br>
+                        <i class="fa-solid fa-check fa-xl azul"></i> Compra com mais segurança
+                        <br><br>
+                        <i class="fa-solid fa-check fa-xl azul"></i> Acelera seu crescimento
+                    </p>
+
+                    <p class="anima-2 animacao-2">Enquanto muitos ainda estão procurando, você já estará negociando com
+                        quem entrega.</p>
+
+                    <a class="btn btn-home btn btn-home anima-3 animacao-3" href="https://pay.kiwify.com.br/cTKqLn8"
+                        target="_blank">QUERO TER ACESSO A LISTA</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="dinheiro"> <!-- Sobre Mim -->
+        <div class="container">
+            <div class="row align-items-center d-flex justify-content-center justify-content-md-start">
+                <div class="col-10 col-sm-12 col-md-12 col-lg-12 col-xl-6 d-flex flex-column">
+                    <h1 class="anima-1 animacao-1"><span class="azul">Quem sou eu</span> e por que você pode <span
+                            class="azul">confiar</span> em mim?
+                        <br>
+                        <span id="span1-3">Eu vivo o mercado de cabelo humano todos os dias.</span>
+
+                    </h1>
+
+                    <p class="anima-2 animacao-2">Sou dono da Cabelô, uma empresa especializada na compra e venda de
+                        cabelo humano, com loja física, e-commerce que vende para todo o Brasil e também para fora do
+                        país.
+                        <br><br>
+                        Não trabalho com teoria <br>
+                        Trabalho com prática.
+                    </p>
+
+                    <p class="anima-2 animacao-2">Viajo para me relacionar pessoalmente com fornecedores.
+                        Compro cabelo brasileiro e importado.
+                        Já testei qualidade, padrão de fio, constância de entrega e negociação direta <br><br>
+
+                        Tenho um time de vendas estruturado.
+                        Somos mais de mil clientes ativos.
+                        Fomos o primeiro empresário do segmento no Brasil a fazer propaganda em TV aberta (Band),
+                        elevando o nível do mercado.
+                        <br><br>
+
+                        Eu não vendo promessa.<br>
+                        Eu vendo experiência validada no campo.
+                    </p>
+
+                    <p class="anima-2 animacao-2">Tudo que compartilho vem da vivência real de quem compra, negocia,
+                        testa e vende cabelo todos os dias.<br><br>
+
+                        Se eu coloco um fornecedor na minha lista, é porque ele já passou pelo meu padrão.<br><br>
+
+                        E meu padrão é alto.</p>
+
+                    <a class="btn btn-home btn btn-home anima-3 animacao-3" href="https://pay.kiwify.com.br/cTKqLn8"
+                        target="_blank">QUERO TER ACESSO A LISTA</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="depoimentos"> <!-- Depoimentos -->
+        <div id="container-2" class="container">
+
+            <h1>DEPOIMENTOS DE QUEM <span class="azul">JÁ COMPROU</span></h1>
+
+            <button class="seta-direita-2 controles-2"><i class="fa-solid fa-chevron-right"></i></button>
+            <button class="seta-esquerda-2 controles-2"><i class="fa-solid fa-chevron-left"></i></button>
+
+            <div id="fotos">
+                <img class="item-2 item-foco" src="Imagens/Depoimentos/depoimento-1.webp" alt="">
+                <img class="item-2" src="Imagens/Depoimentos/depoimento-2.webp" alt="">
+                <img class="item-2" src="Imagens/Depoimentos/depoimento-3.webp" alt="">
+                <img class="item-2" src="Imagens/Depoimentos/depoimento-4.webp" alt="">
+                <img id="ultimo-depoimento" class="item-2" src="Imagens/Depoimentos/depoimento-5.webp" alt="">
+            </div>
+
+            <div style="display: flex; justify-content: center;">
+                <a class="btn btn-home btn btn-home anima-3 animacao-3" href="https://pay.kiwify.com.br/cTKqLn8"
+                    target="_blank">QUERO TER ACESSO A LISTA</a>
+            </div>
+
+        </div>
+        
+    </section>
+
+    <!-- SCREEN OFF -->
+    <section style="display: none;" id="ensino"> <!-- Ensino -->
+        <div class="container">
+            <div class="row align-items-center justify-content-center justify-content-md-start d-flex flex-row-reverse">
+                <div class="col-10 col-sm-12 col-md-12 col-lg-12 col-xl-6 d-flex flex-column">
+                    <h1 class="anima-1 animacao-1">Com quem você <span class="azul">vai aprender ?</span></h1>
+
+                    <p class="anima-2 animacao-2">Caio Caúla é trader profissional há mais de 5 anos. <span
+                            class="azul">Fundador do Treinamento Trader</span> – O Cara do Mercado e autor do Guia
+                        Definitivo dos Padrões Candlestick.</p>
+
+                    <p class="anima-2 animacao-2">Após perceber muitas falhas com a forma que os gurus do mercado
+                        ensinavam, <span class="azul">resolveu criar seu canal no Youtube, que hoje ultrapassa 270 mil
+                            inscritos.</span></p>
+
+                    <p class="anima-2 animacao-2">Atualmente é professor de Análise Técnica, muito reconhecido pela sua
+                        didática clara e objetiva.</p>
+
+                    <button class="btn btn-home anima-3 animacao-3" type="button">QUERO ME INSCREVER</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="display: none;" id="metodos"> <!-- Metodos -->
+        <div id="container" class="container col-10 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+
+            <h1 class="anima-4 animacao-4">Do básico ao <span class="azul">avançado</span></h1>
+            <p>Ensinarei tudo o que você precisa para fazer dinheiro no mercado financeiro.</p>
+
+            <button class="seta-direita controles"><i class="fa-solid fa-chevron-right"></i></button>
+            <button class="seta-esquerda controles"><i class="fa-solid fa-chevron-left"></i></button>
+
+            <div id="fotos">
+                <img class="item item-foco" src="" alt="">
+                <img class="item" src="" alt="">
+                <img class="item" src="" alt="">
+                <img class="item" src="" alt="">
+                <img class="item" src="" alt="">
+                <img class="item" src="" alt="">
+                <img class="item" src="" alt="">
+                <img class="item" src="" alt="">
+            </div>
+
+        </div>
+    </section>
+
+    <section style="display: none" id="info"> <!-- Info -->
+        <div class="container">
+            <h1 class="anima-4 animacao-4"><span class="azul">+ Informações</span> sobre os módulos abaixo:</h1>
+
+            <div id="modulos-conteudos" class="row flex-column flex-md-row justify-content-center">
+                <div class="col-md-5">
+
+                    <div
+                        class="col-10 col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex align-items-center justify-content-between caixa-conteudo anima-5 animacao-5">
+                        <h5>Módulo 1</h5>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="informa">
+                        <p>Você conhecerá os princípios do mercado e como usar as plataformas para ter bons resultados.
+                        </p>
+                    </div>
+
+                    <div
+                        class="col-10 col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex align-items-center justify-content-between caixa-conteudo anima-6 animacao-6">
+                        <h5>Módulo 2</h5>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="informa">
+                        <p>Você aprenderá a como fazer as operações e ferramentas das plataformas na prática.</p>
+                    </div>
+
+                    <div
+                        class="col-10 col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex align-items-center justify-content-between caixa-conteudo anima-5 animacao-5">
+                        <h5>Módulo 3</h5>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="informa">
+                        <p>Você irá aprender a como analisar qualquer gráfico de forma rápida e simples com técnicas que
+                            dão resultados.</p>
+                    </div>
+
+                    <div
+                        class="col-10 col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex align-items-center justify-content-between caixa-conteudo anima-6 animacao-6">
+                        <h5>Módulo 4</h5>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="informa">
+                        <p>Você aprenderá a identificar as principais formas de candles e a como utilizar deles para
+                            fazer entradas certeiras baseadas em price action.</p>
+                    </div>
+
+                    <div
+                        class="col-10 col-sm-12 col-md-12 col-lg-12 col-xl-12 d-md-none d-flex align-items-center justify-content-between caixa-conteudo-2 anima-5 animacao-5">
+                        <h5>Módulo 5</h5>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="informa-2">
+                        <p>Você dominará o Método CDM, sabendo analisar com maestria o momento certo de entrar e sair da
+                            operação.</p>
+                    </div>
+
+                    <div
+                        class="col-10 col-sm-12 col-md-12 col-lg-12 col-xl-12 d-md-none d-flex align-items-center justify-content-between caixa-conteudo-2 anima-6 animacao-6">
+                        <h5>Módulo 6</h5>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="informa-2">
+                        <p>Você aprenderá técnicas avançadas para conseguir maximizar seus lucros e diminuir suas
+                            perdas.</p>
+                    </div>
+
+                    <div
+                        class="col-10 col-sm-12 col-md-12 col-lg-12 col-xl-12 d-md-none d-flex align-items-center justify-content-between caixa-conteudo-2 anima-5 animacao-5">
+                        <h5>Módulo 7</h5>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="informa-2">
+                        <p>Você vai saber como operar todos os tipos de mercados, bolsa de valores, forex e
+                            criptomoedas. Aprenderá como fazer trades rápidos e também trades longos. </p>
+                    </div>
+
+                    <div
+                        class="col-10 col-sm-12 col-md-12 col-lg-12 col-xl-12 d-md-none d-flex align-items-center justify-content-between caixa-conteudo-2 anima-6 animacao-6">
+                        <h5>Módulo 8</h5>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="informa-2">
+                        <p>Você aprenderá dicas para lidar com as suas emoções para não deixar que ela controle você e
+                            faça você perder dinheiro nos trades.</p>
+                    </div>
+
+                </div>
+
+                <div class="d-none d-md-block col-md-5">
+
+                    <div
+                        class="col-10 col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex align-items-center justify-content-between caixa-conteudo anima-5 animacao-5">
+                        <h5>Módulo 5</h5>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="informa">
+                        <p>Você dominará o Método CDM, sabendo analisar com maestria o momento certo de entrar e sair da
+                            operação.</p>
+                    </div>
+
+                    <div
+                        class="col-10 col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex align-items-center justify-content-between caixa-conteudo anima-6 animacao-6">
+                        <h5>Módulo 6</h5>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="informa">
+                        <p>Você aprenderá técnicas avançadas para conseguir maximizar seus lucros e diminuir suas
+                            perdas.</p>
+                    </div>
+
+                    <div
+                        class="col-10 col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex align-items-center justify-content-between caixa-conteudo anima-5 animacao-5">
+                        <h5>Módulo 7</h5>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="informa">
+                        <p>Você vai saber como operar todos os tipos de mercados, bolsa de valores, forex e
+                            criptomoedas. Aprenderá como fazer trades rápidos e também trades longos. </p>
+                    </div>
+
+                    <div
+                        class="col-10 col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex align-items-center justify-content-between caixa-conteudo anima-6 animacao-6">
+                        <h5>Módulo 8</h5>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="informa">
+                        <p>Você aprenderá dicas para lidar com as suas emoções para não deixar que ela controle você e
+                            faça você perder dinheiro nos trades.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="rodape-modulos" class="row">
+                <p id="paragrafo-expecifico">O Treinamento possui 20 módulos ao todo ensinando tudo o que importa na
+                    análise técnica para que você consiga operar por conta própria.</p>
+
+                <button id="botao-expecifico" class="btn anima-3 animacao-3" type="button">QUERO ME INSCREVER</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section style="display: none;" id="acesso"> <!-- Acesso -->
+        <div class="container">
+            <div class="row align-items-center d-flex flex-column flex-md-row">
+                <div class="col-10 col-sm-12 col-md-12 col-lg-12 col-xl-4 d-flex flex-column">
+                    <h1 class="anima-1 animacao-1">Assista de qualquer <span class="azul">lugar do mundo!</span></h1>
+
+                    <p class="anima-2 animacao-2">Você pode estudar no seu ritmo, na velocidade que desejar, pode pausar
+                        e rever as aulas quantas vezes quiser, além de tirar todas as suas dúvidas pela plataforma ou no
+                        grupo de alunos.</p>
+
+                    <button class="btn btn-home anima-3 animacao-3" type="button">QUERO ME INSCREVER</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SCREEN OFF -->
+
+    <section id="inscricao"> <!-- Inscrição -->
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-10 col-sm-9 col-md-9 col-lg-9 col-xl-6">
+                    <div class="d-flex flex-column align-items-center caixa-valor">
+                        <img class="img-fluid mt-5 mb-4" width="150" src="Imagens/logo.png" alt="">
+
+                        <h1>Faça sua <span class="azul">inscrição agora</span></h1>
+
+                        <ul class="navbar-nav align-items-center">
+                            <li>
+                                <p><i class="fa-solid fa-check fa-xl"></i>Treinamento do zero ao avançado</p>
+                            </li>
+                            <li>
+                                <p><i class="fa-solid fa-check fa-xl"></i>Método completo e detalhado</p>
+                            </li>
+                            <li>
+                                <p><i class="fa-solid fa-check fa-xl"></i>Suporte exclusivo com o produtor do conteúdo
+                                </p>
+                            </li>
+                            <li>
+                                <p><i class="fa-solid fa-check fa-xl"></i>Acesso vitalício</p>
+                            </li>
+                            <li>
+                                <p><i class="fa-solid fa-check fa-xl"></i>Mais de 8 horas de aulas exclusivas</p>
+                            </li>
+                            <li>
+                                <p><i class="fa-solid fa-check fa-xl"></i>Backtest da estratégia</p>
+                            </li>
+                            <li>
+                                <p><i class="fa-solid fa-check fa-xl"></i>Planilha para operar o método e fazer suas
+                                    operações</p>
+                            </li>
+                            <li style="border-bottom: none;">
+                                <p><i class="fa-solid fa-check fa-xl"></i>Garantia</p>
+                            </li>
+                        </ul>
+
+                        <h2>De: <span class="vermelho">R$1.497,00</span> por apenas</h2>
+
+                        <h2><span class="azul">12x de</span></h2>
+                        <h1 id="preco"><span class="azul">R$ 24,00</span></h1>
+                        <h5>ou R$288,00 à vista</h5>
+
+                        <button class="btn anima-3 animacao-3" type="button"><a href="https://pay.kiwify.com.br/cTKqLn8"
+                                target="_blank">QUERO TER ACESSO A LISTA</a></button>
+
+                        <img id="bancos" class="img-fluid mt-3" width="352" src="Imagens/Itens/Bancos.png" alt="">
+                    </div>
+                </div>
+                <div
+                    class="d-flex flex-column align-items-center justify-content-center col-10 col-sm-12 col-md-12 col-lg-12 col-xl-6 pt-5 pt-md-0">
+                    <div id="imagem">
+                        <img class="img-fluid" width="275" src="Imagens/Itens/Garantia-trader.png" alt="">
+                    </div>
+
+                    <p id="garantia">Ainda está na dúvida se o treinamento é para você?</p>
+
+                    <h1>Seu risco <span class="azul">é zero!</span></h1>
+
+                    <p id="paragrafo-zero">Você pode ver algumas aulas do Treinamento Trader por 7 dias gratuitamente.
+                        Se por algum motivo você não gostar ou achar que não é para você, com um único e-mail receberá
+                        100% do seu dinheiro de volta.</p>
+
+                    <a class="btn btn-home" href="https://pay.kiwify.com.br/cTKqLn8" target="_blank">QUERO TER ACESSO A
+                        LISTA</a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="perguntas"> <!-- Perguntas -->
+        <div class="container">
+            <div class="row d-flex flex-md-row justify-content-center">
+                <div class="d-flex flex-column justify-content-center col-11 col-md-4">
+                    <h1>Perguntas <span class="azul">Frequentes</span></h1>
+                </div>
+                <div class="col-11 col-sm-11 col-md-11 col-lg-11 col-xl-8">
+
+                    <div class="perguntas d-flex align-items-center justify-content-between caixa-conteudo">
+                        <h5>Estou começando do zero no mercado financeiro, o treinamento é para mim?</h5>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="pergunta-feita">
+                        Sim! Você aprenderá desde a abrir uma conta na corretora até a estratégia passo a passo. Além de
+                        ter suporte para tirar todas as suas dúvidas.
+                    </div>
+
+                    <div class="perguntas d-flex align-items-center justify-content-between caixa-conteudo">
+                        <h5>Consigo ter bons resultados mesmo tendo pouco tempo disponível?</h5>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="pergunta-feita">
+                        Sim! Com o método, você conseguirá analisar com precisão qualquer mercado, não ficando preso
+                        apenas aos horários disponíveis da bolsa de valores brasileira.
+                    </div>
+
+                    <div class="perguntas d-flex align-items-center justify-content-between caixa-conteudo">
+                        <h5>O método serve para qualquer ativo?</h5>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="pergunta-feita">
+                        Sim! Funciona para qualquer ativo e qualquer tempo gráfico.
+                    </div>
+
+                    <div class="perguntas d-flex align-items-center justify-content-between caixa-conteudo">
+                        <h5>Quais são as formas de pagamento?</h5>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="pergunta-feita">
+                        Você poderá utilizar 1 ou 2 cartões de crédito, podendo dividir em até 12 vezes. Também é
+                        possível pagar por meio de boleto ou pix à vista.
+                    </div>
+
+                    <div class="perguntas d-flex align-items-center justify-content-between caixa-conteudo">
+                        <h5>Com o método vou saber a hora certa de abrir e sair da operação?</h5>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="pergunta-feita">
+                        Com certeza! Ao final do treinamento você analisará o mercado corretamente e, assim, poderá
+                        aproveitar as maiores e melhores entradas.
+                    </div>
+
+                    <div class="perguntas d-flex align-items-center justify-content-between caixa-conteudo">
+                        <h5>Tenho pouco dinheiro para operar, o método funciona mesmo assim?</h5>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="pergunta-feita">
+                        Sim! O método CDM funciona independente do valor disponível que você possui para investir.
+                    </div>
+
+                    <div class="perguntas d-flex align-items-center justify-content-between caixa-conteudo">
+                        <h5>Por quanto tempo terei acesso ao treinamento?</h5>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="pergunta-feita">
+                        Você terá acesso vitalício, ou seja, pagará apenas uma vez e poderá ver o treinamento para
+                        sempre sem nenhum custo adicional.
+                    </div>
+
+                    <div class="perguntas d-flex align-items-center justify-content-between caixa-conteudo">
+                        <h5>Não curti, quero cancelar. Como faço?</h5>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="pergunta-feita">
+                        Mande um e-mail para suporte@ocaradomercado.com para solicitar o reembolso e tenha 100% do seu
+                        dinheiro de volta se estiver dentro dos 7 dias de garantia.
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="rodape" class="d-flex flex-column align-items-center">
+        <img class="img-fluid" width="160" src="Imagens/logo.png" alt="">
+
+        <div>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+
+        <p>Copyright &copy; Todos os direitos reservados | Feito pelo <a id="social"
+                href="https://www.instagram.com/devluizsilva" target="_blank">Programador Luiz Silva</a></p>
+
+    </footer>
+
+    <script src="JavaScript/metodos.js"></script>
+    <script src="JavaScript/depoimentos.js"></script>
+    <script src="JavaScript/animacoes.js"></script>
+    <script src="JavaScript/informacoes.js"></script>
+    <script src="JavaScript/perguntas.js"></script>
+
+</body>
+
+</html>
