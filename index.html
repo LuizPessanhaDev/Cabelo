@@ -399,17 +399,17 @@
             align-items: center;
         }
 
-        #fotos div{
+        #fotos div {
             padding: 0 35px;
         }
 
-        #fotos video{
+        #fotos video {
             height: 490px;
             border: 3px solid var(--cor1);
             border-radius: 15px;
         }
 
-        #fotos img{
+        #fotos img {
             border: 3px solid var(--cor1);
             border-radius: 10px;
         }
@@ -665,13 +665,14 @@
             font-size: 16px;
         }
 
-        #perguntas div#botao{
+        #perguntas div#botao {
             margin-top: 40px;
             display: flex;
             justify-content: center;
         }
 
-        #perguntas .btn{
+        #perguntas .btn {
+            padding-top: 10px;
             font-size: 24px;
         }
 
@@ -938,6 +939,7 @@
 
             #fotos {
                 padding: 0;
+                height: 550px;
             }
 
             /*Info
@@ -995,8 +997,13 @@
             }
 
             #depoimentos img {
-                margin: 0 70px;
-                padding-left: 2px;
+                margin: 0 70px 0 72px;
+                height: 340px;
+            }
+
+            #fotos video {
+                height: 390px;
+                margin: 0 40px;
             }
 
             /*Acesso
@@ -1069,7 +1076,7 @@
             }
 
             ul li {
-                width: 80%;
+                width: 100%;
             }
 
             ul li p {
@@ -1080,7 +1087,13 @@
     =================*/
 
             #perguntas {
-                height: 860px;
+                height: 910px;
+            }
+
+            #perguntas .btn {
+                font-size: 18px;
+                width: 325px;
+                padding-top: 15px;
             }
 
             #perguntas h1 {
@@ -1090,7 +1103,8 @@
             /*Rodape
     ==================*/
             #rodape {
-                height: 215px;
+                height: 175px;
+                padding: 15px 0;
             }
 
             #rodape p {
@@ -1100,15 +1114,16 @@
             }
 
             #whats {
-                animation: whatsapp 4s infinite ease-in-out !important;
+                animation: none !important;
                 position: fixed;
                 left: 35px;
-                bottom: 25px;
+                bottom: 10px !important;
             }
 
             #whats a img {
-                width: 100px;
-                height: 100px;
+                animation: whatsapp 4s infinite ease-in-out !important;
+                width: 50px !important;
+                height: 50px !important;
             }
 
         }
@@ -1656,7 +1671,8 @@
 
             <div id="fotos">
                 <div>
-                    <video controls class="item-2 item-foco" src="Imagens/Video/Depoimento1.mp4" alt="depoimentos loja cabelô">
+                    <video controls class="item-2 item-foco" src="Imagens/Video/Depoimento1.mp4"
+                        alt="depoimentos loja cabelô">
                 </div>
             </div>
         </div>
@@ -1910,10 +1926,6 @@
                                 <p><i class="fa-solid fa-check fa-xl"></i>Loiro, escuro, cacheado e liso</p>
                             </li>
                             <li>
-                                <p><i class="fa-solid fa-check fa-xl"></i>Planilha para operar o método e fazer suas
-                                    operações</p>
-                            </li>
-                            <li>
                                 <p><i class="fa-solid fa-check fa-xl"></i>Fornecedores nacionais e importados</p>
                             </li>
                             <li>
@@ -1949,7 +1961,8 @@
 
                     <h1>Garanta seu <span class="azul">acesso agora.</span></h1>
 
-                    <p id="paragrafo-zero">Clique e garanta agora o acesso à lista dos melhores fornecedores de cabelo humano. Após pagamento entrega de imediato da lista em pdf no seu email.</p>
+                    <p id="paragrafo-zero">Clique e garanta agora o acesso à lista dos melhores fornecedores de cabelo
+                        humano. Após pagamento entrega de imediato da lista em pdf no seu email.</p>
 
                     <a class="btn btn-home" href="https://pay.kiwify.com.br/cTKqLn8" target="_blank">QUERO TER ACESSO A
                         LISTA</a>
@@ -1972,7 +1985,8 @@
                         <i class="fa-solid fa-caret-down"></i>
                     </div>
                     <div class="pergunta-feita">
-                        Não. Todos os fornecedores já estão validados. Você pode negociar e comprar diretamente pelo WhatsApp, sem precisar viajar.
+                        Não. Todos os fornecedores já estão validados. Você pode negociar e comprar diretamente pelo
+                        WhatsApp, sem precisar viajar.
                     </div>
 
                     <div class="perguntas d-flex align-items-center justify-content-between caixa-conteudo">
@@ -1980,7 +1994,8 @@
                         <i class="fa-solid fa-caret-down"></i>
                     </div>
                     <div class="pergunta-feita">
-                        A lista contém 39 fornecedores com WhatsApp direto dos donos e Instagram de alguns deles. Basta chamar no WhatsApp e informar que veio através da lista do Wendel.
+                        A lista contém 39 fornecedores com WhatsApp direto dos donos e Instagram de alguns deles. Basta
+                        chamar no WhatsApp e informar que veio através da lista do Wendel.
                     </div>
 
                     <div class="perguntas d-flex align-items-center justify-content-between caixa-conteudo">
@@ -1996,7 +2011,8 @@
                         <i class="fa-solid fa-caret-down"></i>
                     </div>
                     <div class="pergunta-feita">
-                        Sim. Temos vários fornecedores que trabalham com cabelo brasileiro fino e extra fino. Inclusive, a lista contém 3 dos principais fornecedores do Sul do Brasil.
+                        Sim. Temos vários fornecedores que trabalham com cabelo brasileiro fino e extra fino. Inclusive,
+                        a lista contém 3 dos principais fornecedores do Sul do Brasil.
                     </div>
 
                     <div class="perguntas d-flex align-items-center justify-content-between caixa-conteudo">
@@ -2004,7 +2020,8 @@
                         <i class="fa-solid fa-caret-down"></i>
                     </div>
                     <div class="pergunta-feita">
-                        Sim. A maioria dos fornecedores trabalha com cabelo indiano e vietnamita, com diferentes qualidades e preços. Você escolhe o padrão que melhor atende seu público.
+                        Sim. A maioria dos fornecedores trabalha com cabelo indiano e vietnamita, com diferentes
+                        qualidades e preços. Você escolhe o padrão que melhor atende seu público.
                     </div>
 
                     <div class="perguntas d-flex align-items-center justify-content-between caixa-conteudo">
@@ -2012,7 +2029,8 @@
                         <i class="fa-solid fa-caret-down"></i>
                     </div>
                     <div class="pergunta-feita">
-                        Sim. Serve tanto para quem está começando quanto para quem já vende cabelo há anos. Fornecedor nunca é demais.
+                        Sim. Serve tanto para quem está começando quanto para quem já vende cabelo há anos. Fornecedor
+                        nunca é demais.
                     </div>
 
                     <div class="perguntas d-flex align-items-center justify-content-between caixa-conteudo">
@@ -2020,7 +2038,8 @@
                         <i class="fa-solid fa-caret-down"></i>
                     </div>
                     <div class="pergunta-feita">
-                        Depende do fornecedor. Alguns exigem quantidade mínima, outros permitem comprar pequenas quantidades para teste.
+                        Depende do fornecedor. Alguns exigem quantidade mínima, outros permitem comprar pequenas
+                        quantidades para teste.
                     </div>
 
                     <div class="perguntas d-flex align-items-center justify-content-between caixa-conteudo">
@@ -2036,11 +2055,13 @@
                         <i class="fa-solid fa-caret-down"></i>
                     </div>
                     <div class="pergunta-feita">
-                        Sim. Já comprei com a maioria deles. Os que ainda não comprei foram indicados por lojas confiáveis do mercado. Essa lista já impactou diretamente meu negócio.
+                        Sim. Já comprei com a maioria deles. Os que ainda não comprei foram indicados por lojas
+                        confiáveis do mercado. Essa lista já impactou diretamente meu negócio.
                     </div>
 
                     <div id="botao">
-                        <a class="btn btn-home" href="https://pay.kiwify.com.br/cTKqLn8" target="_blank">QUERO TER ACESSO A
+                        <a class="btn btn-home" href="https://pay.kiwify.com.br/cTKqLn8" target="_blank">QUERO TER
+                            ACESSO A
                             LISTA</a>
                     </div>
 
